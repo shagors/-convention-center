@@ -109,6 +109,16 @@
 
     <main>
 
+        <section>
+
+            <!-- Toast option -->
+            <div class="toast show float-end">
+                <div class="toast-header py-2">
+                    <p class="text-dark" style="height: 15px; font-size: 12px; font-weight: 600;"> <img src="./icons/Vector.svg" alt=""> This offer for you only for today get 20% off</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+                </div>
+            </div>
+        </section>
         <!-- Extra part  -->
         <section style="background-image: linear-gradient(#dbcbc5, #adb3cc);" >
             <div class="container">
@@ -312,5 +322,17 @@
 
     <!-- Bootstrap Js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById("toastbtn").onclick = function() {
+        var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+        var toastList = toastElList.map(function(toastEl) {
+            return new bootstrap.Toast(toastEl)
+        })
+        toastList.forEach(toast => toast.show())
+        }
+    </script>
+
+
 </body>
 </html>
