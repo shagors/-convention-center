@@ -10,6 +10,12 @@ body{
     font-family: 'Poppins',
     sans-serif;
 }
+.card-bd-trd {
+    background-color: #3F87F5;
+    color: #fff;
+    transform: scale(1.10);
+    transition: .3s;
+}
 .card-bd:hover{
     background-color: #3F87F5;
     color: #fff;
@@ -33,6 +39,22 @@ body{
 .price-items{
     font-size: 12px;
 }
+.hot-item-body{
+    position: relative;
+}
+.hot-item{
+    position: absolute;
+    top: -10px;
+    left: 72%;
+    width: 46px;
+    height: 27px;
+    background-color: #FF4E4E;
+    border-radius: 25px;
+    font-size: 12px;
+    padding: 4px;
+    color: #fff;
+}
+
 .footter-copy{
     font-size: 10px;
     padding-top: 100px;
