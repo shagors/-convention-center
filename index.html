@@ -56,30 +56,30 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                    <img src="./images/banner.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h1 class="fs-1">The perfect venue for your <br>
+                    <img src="./images/banner.png" class=" w-100" alt="...">
+                    <div class="carousel-caption ">
+                        <h1 class="car-h1">The perfect venue for your <br>
                         next event</h1>
-                        <p>We capture your best and desirable memory</p>
-                        <a class="btn btn-info text-light px-3" href="https://github.com/Porgramming-Hero-web-course/convention-center-shagors" target="_blank">Book Now</a>
+                        <p class="car-p">We capture your best and desirable memory</p>
+                        <a class="btn btn-info text-light px-3 btn-car" href="https://github.com/Porgramming-Hero-web-course/convention-center-shagors" target="_blank">Book Now</a>
                     </div>
                     </div>
                     <div class="carousel-item">
-                    <img src="./images/Couple-2.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h1 class="fs-1">The perfect venue for your <br>
+                    <img src="./images/Couple-2.png" class="w-100" alt="...">
+                    <div class="carousel-caption">
+                        <h1 class="car-h1">The perfect venue for your <br>
                         next event</h1>
-                        <p>We capture your best and desirable memory</p>
-                        <a class="btn btn-info text-light px-3" href="https://github.com/Porgramming-Hero-web-course/convention-center-shagors" target="_blank">Book Now</a>
+                        <p class="car-p">We capture your best and desirable memory</p>
+                        <a class="btn btn-info text-light px-3 btn-car" href="https://github.com/Porgramming-Hero-web-course/convention-center-shagors" target="_blank">Book Now</a>
                     </div>
                     </div>
                     <div class="carousel-item">
-                    <img src="./images/slide1.png" class="d-block w-100 shadow-lg" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h1 class="fs-1">The perfect venue for your <br>
+                    <img src="./images/slide1.png" class="w-100 shadow-lg" alt="...">
+                    <div class="carousel-caption">
+                        <h1 class="car-h1">The perfect venue for your <br>
                         next event</h1>
-                        <p style="font-size: 18px;">We capture your best and desirable memory</p>
-                        <a class="btn btn-info text-light px-3" href="https://github.com/Porgramming-Hero-web-course/convention-center-shagors" target="_blank">Book Now</a>
+                        <p class="car-p">We capture your best and desirable memory</p>
+                        <a class="btn btn-info text-light px-3 btn-car" href="https://github.com/Porgramming-Hero-web-course/convention-center-shagors" target="_blank">Book Now</a>
                     </div>
                     </div>
                 </div>
@@ -114,7 +114,7 @@
             <div class="toast show float-end">
                 <div class="toast-header py-2">
                     <p class="text-dark" style="height: 15px; font-size: 12px; font-weight: 600;"> <img src="./icons/Vector.svg" alt=""> This offer for you only for today get 20% off</p>
-                    <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
             </div>
         </section>
@@ -339,13 +339,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <script>
-        document.getElementById("toastbtn").onclick = function() {
-        var toastElList = [].slice.call(document.querySelectorAll('.toast'))
-        var toastList = toastElList.map(function(toastEl) {
-            return new bootstrap.Toast(toastEl)
-        })
-        toastList.forEach(toast => toast.show())
-        }
+            // toast js
+            
+        document.addEventListener("DOMContentLoaded", function(){
+  	        var toastElementList = [].slice.call(document.querySelectorAll(".toast"));
+	        var toastList = toastElementList.map(function(element){
+  		        return new bootstrap.Toast(element, {
+        	    autohide: false
+                });
+	        });
+        });
     </script>
 
 
