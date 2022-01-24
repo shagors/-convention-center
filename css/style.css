@@ -57,5 +57,11 @@ body{
 
 .footter-copy{
     font-size: 10px;
-    padding-top: 100px;
+    padding-top: 80px;
+}
+.f-btn{
+    width: 130px;
+    height: 55px;
+    margin: 16px 3px;
+    border-color: #fff;
 }
